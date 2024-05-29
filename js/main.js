@@ -156,4 +156,7 @@ const summaryPoints = [
 ];
 
 // Append summary points to the summary list
-const summaryList = d3
+const summaryList = d3.select("#summary-list");
+summaryPoints.forEach(point => {
+  summaryList.append("li").text(point);
+});
